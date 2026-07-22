@@ -2,8 +2,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="{{ .Site.Params.kagentURL }}" target="_blank" rel="noopener">
-      <span class="brand-mark">🤖</span>
-      <span class="brand-name">kagent</span>
+      <img class="brand-logo" src="{{ "images/kagent-logo.svg" | relURL }}" alt="kagent" height="26">
     </a>
     <nav class="nav">
       <a href="{{ .Site.Params.githubURL }}" target="_blank" rel="noopener">GitHub</a>
@@ -15,35 +14,44 @@
 
 <main>
   <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">{{ .Site.Params.eventName }} · {{ .Site.Params.eventLocation }}</p>
-      <h1 class="hero-title">Agentic AI, built for<br><span class="grad">Kubernetes</span>.</h1>
-      <p class="hero-sub">
-        Meet <strong>kagent</strong> — the open source framework for running AI agents and MCP servers
-        natively on Kubernetes. Dive into hands-on labs from the team at KubeCon + CloudNativeCon Japan.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#labs">Explore the labs</a>
-        <a class="btn btn-ghost" href="{{ .Site.Params.kagentURL }}" target="_blank" rel="noopener">Visit kagent.dev →</a>
+    <div class="wrap hero-grid">
+      <div class="lockup">
+        <img class="event-lockup" src="{{ "images/kcjp26-logo-black.svg" | relURL }}"
+             alt="KubeCon + CloudNativeCon Japan 2026" width="412" height="187">
+        <span class="lockup-presented">
+          <span class="lockup-by">Hands-on Labs by</span>
+          <img class="lockup-kagent" src="{{ "images/kagent-logo.svg" | relURL }}" alt="kagent" height="30">
+        </span>
       </div>
-      <ul class="hero-meta">
-        <li><span class="dot"></span>100% open source</li>
-        <li><span class="dot"></span>Runs on any cluster</li>
-        <li><span class="dot"></span>MCP-native</li>
-      </ul>
+      <div class="hero-details">
+        <p class="hero-date">{{ .Site.Params.eventDates }}</p>
+        <p class="hero-loc">{{ .Site.Params.eventLocation }}</p>
+        <p class="hero-tags">#KUBECON&nbsp;&nbsp;&nbsp;#CLOUDNATIVECON</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#labs">View the labs</a>
+          <a class="btn btn-outline" href="{{ .Site.Params.kagentURL }}" target="_blank" rel="noopener">Visit kagent.dev</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="wrap">
+      <h2 class="kicker-head">Agentic AI, built for Kubernetes</h2>
+      <p class="intro-lead">
+        <strong>kagent</strong> is the open source framework for running AI agents and MCP servers
+        natively on Kubernetes. Explore these four self-paced, hands-on labs from the team at
+        KubeCon&nbsp;+&nbsp;CloudNativeCon Japan.
+      </p>
     </div>
   </section>
 
   <section class="labs" id="labs">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Hands-on labs</h2>
-        <p>Four self-paced tracks to go from zero to shipping agents on Kubernetes.</p>
-      </div>
       <div class="grid">
-        {{ range .Site.Data.labs.labs }}
+        {{ range $i, $lab := .Site.Data.labs.labs }}
         <a class="card" href="{{ .url }}" {{ if ne .url "#" }}target="_blank" rel="noopener"{{ end }}>
-          <div class="card-icon">{{ partial "icon.html" .icon }}</div>
+          <span class="card-num">{{ printf "%02d" (add $i 1) }}</span>
           <span class="card-tag">{{ .tag }}</span>
           <h3 class="card-title">{{ .title | safeHTML }}</h3>
           <p class="card-desc">{{ .description }}</p>
@@ -61,8 +69,8 @@
         <p>Star the project, read the docs, and bring agentic AI to your own clusters.</p>
       </div>
       <div class="cta-band-actions">
-        <a class="btn btn-primary" href="{{ .Site.Params.githubURL }}" target="_blank" rel="noopener">Star on GitHub</a>
-        <a class="btn btn-ghost" href="{{ .Site.Params.kagentURL }}" target="_blank" rel="noopener">Read the docs</a>
+        <a class="btn btn-solid" href="{{ .Site.Params.githubURL }}" target="_blank" rel="noopener">Star on GitHub</a>
+        <a class="btn btn-outline light" href="{{ .Site.Params.kagentURL }}" target="_blank" rel="noopener">Read the docs</a>
       </div>
     </div>
   </section>
@@ -71,8 +79,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="brand-mark">🤖</span>
-      <span class="brand-name">kagent</span>
+      <img class="brand-logo" src="{{ "images/kagent-logo.svg" | relURL }}" alt="kagent" height="26">
       <p class="footer-note">Agentic AI for Kubernetes — open source.</p>
     </div>
     <div class="footer-links">
