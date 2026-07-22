@@ -1,0 +1,18 @@
+baseURL = "https://solo-io.github.io/kubecon-2026-japan-labs/"
+languageCode = "en-us"
+title = "kagent @ KubeCon + CloudNativeCon Japan"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  eventName = "KubeCon + CloudNativeCon Japan 2026"
+  eventLocation = "Tokyo, Japan"
+  eventDates = "June 2026"
+  kagentURL = "https://kagent.dev/"
+  cncfURL = "https://www.cncf.io/"
+  eventURL = "https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/"
+  githubURL = "https://github.com/kagent-dev/kagent"
+  description = "Hands-on labs for kagent — bringing agentic AI to Kubernetes. Join us at KubeCon + CloudNativeCon Japan."
+
+[markup.goldmark.renderer]
+  unsafe = true

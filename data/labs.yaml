@@ -1,0 +1,29 @@
+# Edit the `url` for each lab. Placeholder "#" links can be swapped anytime.
+labs:
+  - title: "Build, run &amp; deploy MCP servers to Kubernetes"
+    description: "Package Model Context Protocol servers as containers and ship them to a cluster with kmcp — from local build to production deploy."
+    tag: "MCP · Kubernetes"
+    cta: "Start lab"
+    url: "https://www.solo.io/resources/lab/build-run-deploy-mcp-servers-to-kubernetes"
+    icon: "server"
+
+  - title: "Build AI agents with agent skills"
+    description: "Compose reusable agent skills into capable, task-focused AI agents that run natively on Kubernetes with kagent."
+    tag: "Agents · Skills"
+    cta: "Start lab"
+    url: "https://www.solo.io/resources/lab/build-ai-agents-with-agent-skills"
+    icon: "agent"
+
+  - title: "Local development with the kagent CLI"
+    description: "Spin up, iterate, and debug agents on your laptop using the kagent CLI before promoting them to the cluster."
+    tag: "CLI · Dev loop"
+    cta: "Start lab"
+    url: "https://www.solo.io/resources/lab/local-development-with-the-kagent-cli"
+    icon: "terminal"
+
+  - title: "Discover kagent and kmcp"
+    description: "A guided tour of the kagent and kmcp projects — the open source foundation for agentic AI on Kubernetes."
+    tag: "Overview · Getting started"
+    cta: "Start lab"
+    url: "https://www.solo.io/resources/lab/kagent-lab-discover-kagent-kmcp"
+    icon: "compass"
